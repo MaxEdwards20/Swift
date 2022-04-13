@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction()
                 .setReorderingAllowed(true)
-                .add(R.id.fragment_container, Exercises.class, null)
+                .add(R.id.fragment_container, ExercisesFragment.class, null)
                 .commit();
     }
 }

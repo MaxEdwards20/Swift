@@ -30,7 +30,6 @@
         </com.google.android.material.appbar.AppBarLayout>
 
 
-
         <androidx.fragment.app.FragmentContainerView
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:id="@+id/fragment_container"
@@ -46,6 +45,9 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/header_navigation_drawer"
         app:menu="@menu/drawer_navigation_menu"
-        />
+        >
+
+    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>
+

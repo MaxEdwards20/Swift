@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.swift.models.Exercise;
+
 
 public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.ViewHolder> {
     private Exercise[] exercises;
@@ -31,9 +33,8 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.View
         Exercise exercise = exercises[position];
         TextView exTitle = holder.itemView.findViewById(R.id.exercise_title);
         TextView exDescription = holder.itemView.findViewById(R.id.exercise_description);
-        exTitle.setText(exercise.getName());
-        System.out.println("Course name is : " + exercise.getName());
-        exDescription.setText(exercise.getInformation());
+        exTitle.setText(exercise.name);
+        exDescription.setText(exercise.description);
     }
 
     @Override
