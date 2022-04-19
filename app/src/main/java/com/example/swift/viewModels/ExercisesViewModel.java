@@ -54,6 +54,7 @@ public class ExercisesViewModel extends AndroidViewModel {
         }).start();
     }
 
+
     public void saveExercise(String name, String description){
         saving.setValue(true);
         // insert into database
@@ -68,7 +69,6 @@ public class ExercisesViewModel extends AndroidViewModel {
                 handler.post(() ->{
                     entries.set(index, current);
                 });
-
             }else{
                 Exercise exercise = new Exercise();
                 exercise.name = name;

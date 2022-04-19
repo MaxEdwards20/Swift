@@ -38,13 +38,9 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Log.d("EXERCISES ADAPATER", "onBindViewHolder: VIEW HOLDER WAS REBOUND");
-        Exercise exercise = entries.get(position);
         TextView exTitle = holder.itemView.findViewById(R.id.title);
-        TextView exDescription = holder.itemView.findViewById(R.id.description);
-        // Put the elements into the view
-        exTitle.setText(exercise.name);
-        exDescription.setText(exercise.description);
-
+        exTitle.setText(entries.get(position).name);
+        // Put the element names into the actual view
         holder.itemView.setOnClickListener(view -> {
             listener.onClick(entries.get(position));
         });

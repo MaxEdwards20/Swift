@@ -16,7 +16,7 @@ import com.google.android.material.textfield.TextInputEditText;
 public class CreateExercisesFragment extends Fragment {
     private boolean previouslySaving = false;
     public CreateExercisesFragment() {
-        super(R.layout.fragment_create_exercises);
+        super(R.layout.fragment_create_exercise);
     }
 
     @Override
