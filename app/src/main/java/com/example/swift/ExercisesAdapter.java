@@ -24,7 +24,7 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.View
 
     public ExercisesAdapter(ObservableArrayList<Exercise> entries, OnExerciseClicked listener){
         this.entries = entries;
-        this.listener = (listener);
+        this.listener = listener;
         Log.d("Info", "Exercise adapter triggered");
     }
 
@@ -37,7 +37,6 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Log.d("EXERCISES ADAPATER", "onBindViewHolder: VIEW HOLDER WAS REBOUND");
         TextView exTitle = holder.itemView.findViewById(R.id.title);
         exTitle.setText(entries.get(position).name);
         // Put the element names into the actual view

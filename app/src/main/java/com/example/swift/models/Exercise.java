@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 
 /*
 ===========
-id | title | body | createdAt|
+id | name | description | createdAt|
 
 
  */

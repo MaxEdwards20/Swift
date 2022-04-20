@@ -25,12 +25,12 @@ public class ExercisesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ExercisesViewModel viewModel = new ViewModelProvider(getActivity()).get(ExercisesViewModel.class); // view model store owner
-        ObservableArrayList<Exercise> exercises = viewModel.getEntries();
+        ObservableArrayList exercises = viewModel.getEntries();
         ExercisesAdapter adapter = new ExercisesAdapter(
                 exercises, entry -> {
                     viewModel.setCurrentEntry(entry);
                     getActivity().getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, ExercisesFragment.class, null)
+                            .replace(R.id.fragment_container, ExerciseFragment.class, null)
                             .setReorderingAllowed(true)
                             .addToBackStack(null)
                             .commit();
@@ -66,9 +66,8 @@ public class ExercisesFragment extends Fragment {
         });
 
         RecyclerView recyclerView = view.findViewById(R.id.recycler_exercises);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         recyclerView.setAdapter(adapter);
-
         // Put floating action button down for user to input a new exercise
         view.findViewById(R.id.floating_action_button).setOnClickListener(floating_action_button -> {
                     getActivity().getSupportFragmentManager().beginTransaction()
@@ -77,8 +76,6 @@ public class ExercisesFragment extends Fragment {
                             .addToBackStack(null)
                             .commit();
 
-                }
-        );
-
+        });
     }
 }
