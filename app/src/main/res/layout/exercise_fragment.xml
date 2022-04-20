@@ -23,14 +23,14 @@
 
     <TextView
         android:id="@+id/bodyView"
-        android:layout_width="411dp"
-        android:layout_height="158dp"
+        android:layout_width="415dp"
+        android:layout_height="58dp"
         android:layout_marginTop="4dp"
-        android:textAlignment="center"
         android:padding="16dp"
-        android:textSize="20sp"
         android:shadowColor="@color/secondary"
+        android:textAlignment="center"
         android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleView" />

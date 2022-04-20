@@ -49,7 +49,7 @@ public class CreateExercisesFragment extends Fragment {
             TextInputEditText titleEditText = view.findViewById(R.id.exerciseNameEditText);
             TextInputEditText weightEditText = view.findViewById(R.id.exerciseWeightEditText);
             TextInputEditText setsEditText = view.findViewById(R.id.exerciseSetsEditText);
-            viewModel.saveExercise(titleEditText.getText().toString(), weightEditText.getText().toString(), setsEditText.toString());
+            viewModel.saveExercise(titleEditText.getText().toString(), weightEditText.getText().toString(), setsEditText.getText().toString());
         });
     }
 }

@@ -30,8 +30,8 @@ public class ExerciseFragment extends Fragment {
                 TextView bodyView = view.findViewById(R.id.bodyView);
                 TextView setsView = view.findViewById(R.id.setsView);
                 titleView.setText(entry.name);
-                bodyView.setText(entry.weight);
-                setsView.setText(entry.sets);
+                bodyView.setText("Weight: " + entry.weight);
+                setsView.setText("Sets: " + entry.sets);
             }
         });
 
