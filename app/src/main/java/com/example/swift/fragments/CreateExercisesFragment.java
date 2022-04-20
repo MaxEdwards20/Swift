@@ -26,9 +26,11 @@ public class CreateExercisesFragment extends Fragment {
         viewModel.getCurrentEntry().observe(getViewLifecycleOwner(), (entry) -> {
             if (entry != null) {
                 TextInputEditText titleEditText = view.findViewById(R.id.exerciseNameEditText);
-                TextInputEditText bodyEditText = view.findViewById(R.id.exerciseDescriptionEditText);
+                TextInputEditText weightEditText = view.findViewById(R.id.exerciseWeightEditText);
+                TextInputEditText setsEditText = view.findViewById(R.id.exerciseSetsEditText);
                 titleEditText.setText(entry.name);
-                bodyEditText.setText(entry.description);
+                weightEditText.setText(entry.weight);
+                setsEditText.setText(entry.sets);
             }
         });
 
@@ -45,8 +47,9 @@ public class CreateExercisesFragment extends Fragment {
 
         view.findViewById(R.id.save).setOnClickListener(saveButton -> {
             TextInputEditText titleEditText = view.findViewById(R.id.exerciseNameEditText);
-            TextInputEditText bodyEditText = view.findViewById(R.id.exerciseDescriptionEditText);
-            viewModel.saveExercise(titleEditText.getText().toString(), bodyEditText.getText().toString());
+            TextInputEditText weightEditText = view.findViewById(R.id.exerciseWeightEditText);
+            TextInputEditText setsEditText = view.findViewById(R.id.exerciseSetsEditText);
+            viewModel.saveExercise(titleEditText.getText().toString(), weightEditText.getText().toString(), setsEditText.toString());
         });
     }
 }

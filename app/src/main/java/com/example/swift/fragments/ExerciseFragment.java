@@ -11,8 +11,6 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.swift.R;
 import com.example.swift.viewModels.ExercisesViewModel;
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.textfield.TextInputEditText;
 
 public class ExerciseFragment extends Fragment {
     public ExerciseFragment(){
@@ -30,8 +28,10 @@ public class ExerciseFragment extends Fragment {
             } else {
                 TextView titleView = view.findViewById(R.id.titleView);
                 TextView bodyView = view.findViewById(R.id.bodyView);
+                TextView setsView = view.findViewById(R.id.setsView);
                 titleView.setText(entry.name);
-                bodyView.setText(entry.description);
+                bodyView.setText(entry.weight);
+                setsView.setText(entry.sets);
             }
         });
 

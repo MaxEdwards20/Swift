@@ -55,14 +55,15 @@ public class ExercisesViewModel extends AndroidViewModel {
     }
 
 
-    public void saveExercise(String name, String description){
+    public void saveExercise(String name, String weight, String sets){
         saving.setValue(true);
         // insert into database
         new Thread(() ->{
             if (currentEntry.getValue() != null){
                 Exercise current = currentEntry.getValue();
                 current.name = name;
-                current.description = description;
+                current.weight = weight;
+                current.sets = sets;
                 database.getExercisesDao().update(current);
                 currentEntry.postValue(current);
                 int index = entries.indexOf(current);
@@ -72,7 +73,8 @@ public class ExercisesViewModel extends AndroidViewModel {
             }else{
                 Exercise exercise = new Exercise();
                 exercise.name = name;
-                exercise.description = description;
+                exercise.weight = weight;
+                exercise.sets = sets;
                 exercise.createdAt = System.currentTimeMillis();
                 exercise.id = database.getExercisesDao().insert(exercise);
                 handler.post(() -> {

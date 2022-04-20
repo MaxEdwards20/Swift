@@ -19,7 +19,10 @@ public class Exercise {
     public String name;
 
     @ColumnInfo
-    public String description;
+    public String weight;
+
+    @ColumnInfo
+    public String sets;
 
     @ColumnInfo (name = "created_at")
     public long createdAt;

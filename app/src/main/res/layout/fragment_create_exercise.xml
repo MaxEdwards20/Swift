@@ -8,10 +8,9 @@
     android:layout_margin="17dp"
     tools:context=".fragments.CreateExercisesFragment">
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
     >
         <TextView
@@ -22,35 +21,54 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/exerciseName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
-        android:hint="Exercise"
-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+            android:id="@+id/exerciseName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:hint="Exercise"
+            app:boxBackgroundColor="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/exerciseNameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/exerciseDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
-        android:hint="Description"
-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
-
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/exerciseDescriptionEditText"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/exerciseWeight"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:hint="Weight"
+            app:boxBackgroundColor="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
 
-    </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/exerciseWeightEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/exerciseSets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:hint="Sets"
+            app:boxBackgroundColor="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/exerciseSetsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.button.MaterialButton
